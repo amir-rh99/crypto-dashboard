@@ -2,7 +2,7 @@ import Card from "./components/Card";
 
 export default function Home() {
   return (
-    <div>
+    <div className="grid grid-cols-1 gap-5">
       <div className="grid grid-cols-3 gap-5">
         <div className="col-span-2">
           <Card>
@@ -19,7 +19,6 @@ export default function Home() {
                       <span> BTC</span>
                     </span>
                   </div>
-
                   <div className="flex gap-10">
                     <div className="flex gap-3">
                       <span className="bg-[#1D2335] w-12 h-12 inline-flex justify-center items-center rounded-lg">
@@ -150,7 +149,137 @@ export default function Home() {
         </div>
         <div>
           <Card>
-            
+            <div>
+              <h6 className="text-title font-medium text-lg mb-5">Recent Transaction</h6>
+              <div className="flex flex-col gap-2">
+                <div className="flex justify-between">
+                    <div className="flex gap-2">
+                      <span>
+                        <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="none"><circle cx="16" cy="16" r="16" fill="#F3BA2F"/><path fill="#FFF" d="M12.116 14.404L16 10.52l3.886 3.886 2.26-2.26L16 6l-6.144 6.144 2.26 2.26zM6 16l2.26-2.26L10.52 16l-2.26 2.26L6 16zm6.116 1.596L16 21.48l3.886-3.886 2.26 2.259L16 26l-6.144-6.144-.003-.003 2.263-2.257zM21.48 16l2.26-2.26L26 16l-2.26 2.26L21.48 16zm-3.188-.002h.002V16L16 18.294l-2.291-2.29-.004-.004.004-.003.401-.402.195-.195L16 13.706l2.293 2.293z"/></g></svg>
+                      </span>
+                      <div className="flex flex-col">
+                        <span className="text-title text-sm font-medium">
+                          Binance
+                        </span>
+                        <span className="text-xs text-info font-medium">
+                          Buy
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-end">
+                        <span className="text-title text-sm">
+                          $2,526.23
+                        </span>
+                        <span className="text-info text-xs">
+                          Today, 10:20 AM
+                        </span>
+                    </div>
+                </div>
+                <div className="flex justify-between">
+                    <div className="flex gap-2">
+                      <span>
+                        <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="none"><circle cx="16" cy="16" r="16" fill="#F3BA2F"/><path fill="#FFF" d="M12.116 14.404L16 10.52l3.886 3.886 2.26-2.26L16 6l-6.144 6.144 2.26 2.26zM6 16l2.26-2.26L10.52 16l-2.26 2.26L6 16zm6.116 1.596L16 21.48l3.886-3.886 2.26 2.259L16 26l-6.144-6.144-.003-.003 2.263-2.257zM21.48 16l2.26-2.26L26 16l-2.26 2.26L21.48 16zm-3.188-.002h.002V16L16 18.294l-2.291-2.29-.004-.004.004-.003.401-.402.195-.195L16 13.706l2.293 2.293z"/></g></svg>
+                      </span>
+                      <div className="flex flex-col">
+                        <span className="text-title text-sm font-medium">
+                          Binance
+                        </span>
+                        <span className="text-xs text-info font-medium">
+                          Buy
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-end">
+                        <span className="text-title text-sm">
+                          $2,526.23
+                        </span>
+                        <span className="text-info text-xs">
+                          Today, 10:20 AM
+                        </span>
+                    </div>
+                </div>
+                <div className="flex justify-between">
+                    <div className="flex gap-2">
+                      <span>
+                        <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="none"><circle cx="16" cy="16" r="16" fill="#F3BA2F"/><path fill="#FFF" d="M12.116 14.404L16 10.52l3.886 3.886 2.26-2.26L16 6l-6.144 6.144 2.26 2.26zM6 16l2.26-2.26L10.52 16l-2.26 2.26L6 16zm6.116 1.596L16 21.48l3.886-3.886 2.26 2.259L16 26l-6.144-6.144-.003-.003 2.263-2.257zM21.48 16l2.26-2.26L26 16l-2.26 2.26L21.48 16zm-3.188-.002h.002V16L16 18.294l-2.291-2.29-.004-.004.004-.003.401-.402.195-.195L16 13.706l2.293 2.293z"/></g></svg>
+                      </span>
+                      <div className="flex flex-col">
+                        <span className="text-title text-sm font-medium">
+                          Binance
+                        </span>
+                        <span className="text-xs text-info font-medium">
+                          Buy
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-end">
+                        <span className="text-title text-sm">
+                          $2,526.23
+                        </span>
+                        <span className="text-info text-xs">
+                          Today, 10:20 AM
+                        </span>
+                    </div>
+                </div>
+                <div className="flex justify-between">
+                    <div className="flex gap-2">
+                      <span>
+                        <svg className="w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="none"><circle cx="16" cy="16" r="16" fill="#F3BA2F"/><path fill="#FFF" d="M12.116 14.404L16 10.52l3.886 3.886 2.26-2.26L16 6l-6.144 6.144 2.26 2.26zM6 16l2.26-2.26L10.52 16l-2.26 2.26L6 16zm6.116 1.596L16 21.48l3.886-3.886 2.26 2.259L16 26l-6.144-6.144-.003-.003 2.263-2.257zM21.48 16l2.26-2.26L26 16l-2.26 2.26L21.48 16zm-3.188-.002h.002V16L16 18.294l-2.291-2.29-.004-.004.004-.003.401-.402.195-.195L16 13.706l2.293 2.293z"/></g></svg>
+                      </span>
+                      <div className="flex flex-col">
+                        <span className="text-title text-sm font-medium">
+                          Binance
+                        </span>
+                        <span className="text-xs text-info font-medium">
+                          Buy
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-end">
+                        <span className="text-title text-sm">
+                          $2,526.23
+                        </span>
+                        <span className="text-info text-xs">
+                          Today, 10:20 AM
+                        </span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 gap-5">
+        <div className="col-span-2">
+          <Card>
+            <h6 className="text-title font-medium text-lg mb-5">Statistics</h6>
+            <div>
+              <img src="/images/chart2.png"/>
+            </div>
+          </Card>
+        </div>
+        <div>
+          <Card>
+            <div>
+              <div className="mb-5">
+                <span>Buy</span>
+              </div>
+              <div className="flex justify-center items-center gap-5 font-semibold">
+                <span>
+                  <span className="text-title mx-1">1</span>
+                  <span className="text-info text-xs">BTC</span>
+                </span>
+                <span>
+                  <svg  className="w-5 h-5 stroke-title" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                  </svg>
+                </span>
+                <span>
+                  <span className="text-title mx-1">42,565.20</span>
+                  <span className="text-info text-xs">USD</span>
+                </span>
+              </div>
+            </div>
           </Card>
         </div>
       </div>
