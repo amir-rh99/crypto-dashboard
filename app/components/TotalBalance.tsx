@@ -1,6 +1,6 @@
 const TotalBalance = () => {
   return (
-    <div className="flex flex-col md:grid md:grid-cols-2 lg:flex gap-4 lg:gap-10">
+    <div className="flex flex-col md:grid md:grid-cols-2 lg:flex gap-4 justify-between h-full">
       <div>
         <h6 className="text-title font-medium text-lg mb-2 lg:mb-5">Total Balance</h6>
         <div className="text-2xl lg:text-3xl font-medium text-title lg:mb-2">

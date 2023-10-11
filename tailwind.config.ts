@@ -15,6 +15,14 @@ const config: Config = {
         'card': '#1A1B22',
         'body': "#131517",
         'primary': "#FF9F10",
+      },
+      container: {
+        screens: {
+          'sm': '640px',
+          'md': '768px',
+          'lg': '1024px',
+          'xl': '1280px',
+        }
       }
     },
   },
