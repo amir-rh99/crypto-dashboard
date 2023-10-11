@@ -47,7 +47,7 @@ const Transaction = () => {
               }
             ]} />
           </div>
-          <button className='bg-primary/90 py-4 md:py-5 rounded-full text-title font-bold hover:bg-primary transition-all'>
+          <button className='bg-primary/90 py-4 rounded-full text-title font-bold hover:bg-primary transition-all'>
             Proccess to Wallet
           </button>
           <p className='text-info text-sm text-center px-10 lg:px-14 font-medium'>
