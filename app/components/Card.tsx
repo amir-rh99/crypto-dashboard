@@ -1,6 +1,6 @@
 const Card = ({children}:{children: React.ReactNode}) => {
   return (
-    <div className="bg-card rounded-xl p-5">
+    <div className="bg-card rounded-xl p-4 lg:p-5">
         {children}
     </div>
   )

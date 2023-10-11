@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="grid grid-cols-1 gap-5">
 
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid lg:grid-cols-3 gap-5">
         <div className="col-span-2">
           <Card>
             <Balance />
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid lg:grid-cols-3 gap-5">
         <div className="col-span-2">
           <Card>
             <Statistics />
