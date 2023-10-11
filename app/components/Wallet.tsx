@@ -21,11 +21,11 @@ const Wallet = () => {
             <Menu items={WalletMenuItems} />
           </div>
       </div>
-      <div className="md:grid grid-cols-3 gap-10">
-          <div className="mb-5 lg:mb-0">
+      <div className="md:grid grid-cols-5 gap-10">
+          <div className="mb-5 lg:mb-0 col-span-2">
             <img src="/images/chart.png" className="rounded-full mx-auto h-32 aspect-square lg:h-auto" />
           </div>
-          <div className="col-span-2">
+          <div className="col-span-3">
             <div className="flex flex-col gap-2">
               { walletHistory.map(item => <WalletItem key={item.amount} walletItem={item} />) }
             </div>

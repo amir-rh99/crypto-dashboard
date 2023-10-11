@@ -14,7 +14,7 @@ const cryptoMenuItems: MenuItemInterface[] = cryptoList.map(crypto => ({title: c
 
 const Transaction = () => {
   return (
-    <div className='flex flex-col gap-10'>
+    <div className='flex flex-col gap-5 md:gap-10'>
         <div>
           <Tabs tabs={['Buy', 'Sell', 'Send', 'Recieve']} />
         </div>
@@ -36,7 +36,7 @@ const Transaction = () => {
         </div>
         
         <div className='flex flex-col gap-5'>
-          <div className='flex flex-col gap-5'>
+          <div className='grid md:grid md:grid-cols-2 lg:grid-cols-1 gap-5'>
             <Menu transactionMenu={true} items={cryptoMenuItems} />
             <Menu transactionMenu={true} 
             items={[
@@ -47,10 +47,10 @@ const Transaction = () => {
               }
             ]} />
           </div>
-          <button className='bg-primary/90 py-5 rounded-full text-title font-bold hover:bg-primary transition-all'>
+          <button className='bg-primary/90 py-4 md:py-5 rounded-full text-title font-bold hover:bg-primary transition-all'>
             Proccess to Wallet
           </button>
-          <p className='text-info text-sm text-center px-20 font-medium'>
+          <p className='text-info text-sm text-center px-10 lg:px-14 font-medium'>
             The final amount could change depending on the market conditions.
           </p>
         </div>

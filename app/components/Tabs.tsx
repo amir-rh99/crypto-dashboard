@@ -16,8 +16,8 @@ const Tabs = ({tabs}:Props) => {
                 <button key={tab} 
                 onClick={() => selectTab(tab)}
                 className={`${
-                    selectedTab == tab ? 'bg-body text-title' : 'text-info'
-                } px-5 py-2 rounded-full text-sm font-bold transition-all`}>
+                    selectedTab == tab ? 'bg-body text-title !border-info/40' : 'text-info'
+                } px-3 py-1 md:px-5 md:py-2 rounded-full border border-transparent text-xs lg:text-sm font-bold transition-all hover:text-title`}>
                     {tab}
                 </button>
             ))}
