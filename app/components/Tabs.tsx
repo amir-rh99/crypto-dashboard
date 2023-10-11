@@ -2,7 +2,11 @@
 
 import { useState } from "react"
 
-const Tabs = ({tabs}:{tabs: string[]}) => {
+interface Props {
+    tabs: string[]
+}
+
+const Tabs = ({tabs}:Props) => {
 
     const [selectedTab, selectTab] = useState<string>(tabs[0])
     
