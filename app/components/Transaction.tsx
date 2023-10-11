@@ -2,6 +2,7 @@
 
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import Tabs from './Tabs'
 
 interface CryptoInterface {
   name: string
@@ -40,7 +41,7 @@ const Transaction = () => {
   return (
     <div className='flex flex-col gap-10'>
         <div>
-          <span>Buy</span>
+          <Tabs tabs={['Buy', 'Sell', 'Send', 'Recieve']} />
         </div>
 
         <div className="flex justify-center items-center gap-5 font-semibold">
