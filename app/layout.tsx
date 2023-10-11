@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} pb-5`}>
         <Header />
-        <main className='container mx-auto'>
+        <main className='container mx-auto overflow-x-hidden'>
           {children}
         </main>
       </body>

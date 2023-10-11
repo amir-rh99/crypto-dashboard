@@ -5,13 +5,51 @@ import { Fragment, useState } from "react"
 import { MenuItemInterface } from "../models/Menu"
 
 interface Props {
-    transactionMenu?: boolean
     items: MenuItemInterface[]
+    transactionMenu?: boolean
+    buttonElement?: React.ReactElement
+    selectable?: boolean
 }
 
-const Menu = ({transactionMenu = false, items}: Props) => {
+const Menu = ({transactionMenu = false, buttonElement, items, selectable = true}: Props) => {
 
     const [selectedItem, setSelectedItem] = useState(items[0])
+
+    const element = buttonElement ? buttonElement : (
+        transactionMenu ? 
+        (
+            <>
+                <div className='flex items-center gap-2 pr-2'>
+                    <span>
+                        {selectedItem.icon}
+                    </span>
+                    <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 stroke-info">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    </span>
+                </div>
+                <div className='pl-2 font-medium'>
+                    <span className='text-title text-sm'>{selectedItem.title}</span>
+                    <span className='text-info px-2 text-xs'>{selectedItem.description}</span>
+                </div>
+            </>
+        ) :
+        (
+            <>
+                <div className='font-medium'>
+                    <span className='text-title text-sm'>{selectedItem.title}</span>
+                </div>
+                <div className='flex items-center gap-2 pl-2'>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 stroke-info">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </span>
+                </div>
+            </>
+        )
+    )
 
     return (
         <HeadMenu as="div" className="relative">
@@ -19,42 +57,10 @@ const Menu = ({transactionMenu = false, items}: Props) => {
             <HeadMenu.Button 
             className={`${
                 transactionMenu ? 'divide-x-2 divide-info/40 p-4' : 'justify-between py-1 px-4'
-            } bg-body border border-info/40 rounded-full flex items-center w-full transition-all hover:border-info`}>
-                {
-                    transactionMenu ? 
-                    (
-                        <>
-                            <div className='flex items-center gap-2 pr-2'>
-                                <span>
-                                    {selectedItem.icon}
-                                </span>
-                                <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 stroke-info">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                </svg>
-                                </span>
-                            </div>
-                            <div className='pl-2 font-medium'>
-                                <span className='text-title text-sm'>{selectedItem.title}</span>
-                                <span className='text-info px-2 text-xs'>{selectedItem.description}</span>
-                            </div>
-                        </>
-                    ) :
-                    (
-                        <>
-                            <div className='font-medium'>
-                                <span className='text-title text-sm'>{selectedItem.title}</span>
-                            </div>
-                            <div className='flex items-center gap-2 pl-2'>
-                                <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 stroke-info">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                    </svg>
-                                </span>
-                            </div>
-                        </>
-                    )
-                }
+            } ${
+                !buttonElement && 'bg-body border border-info/40 rounded-full flex items-center w-full transition-all hover:border-info'
+            } `}>
+                {element}
             </HeadMenu.Button>
             </div>
             <Transition
@@ -77,7 +83,7 @@ const Menu = ({transactionMenu = false, items}: Props) => {
                             <button
                             onClick={() => setSelectedItem(item)}
                             className={`${
-                                (active || selectedItem.title == item.title) && 'bg-info/40'
+                                (active || (selectable && selectedItem.title == item.title)) && 'bg-info/40'
                             } text-title group flex gap-2 w-full items-center rounded-md px-2 py-2 text-sm`}
                             >
                             {
