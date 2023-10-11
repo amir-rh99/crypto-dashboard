@@ -6,16 +6,22 @@ import {
   Statistics,
   Transaction
 } from "./components"
+import Wallet from "./components/Wallet"
 
 export default function Home() {
   return (
     <div className="grid grid-cols-1 gap-5">
 
       <div className="grid lg:grid-cols-3 gap-5">
-        <div className="col-span-2">
+        <div className="grid gap-5 lg:gap-0 lg:col-span-2">
           <Card>
             <Balance />
           </Card>
+          <div className="lg:hidden">
+            <Card>
+              <Wallet />
+            </Card>
+          </div>
         </div>
         <div>
           <Card>
@@ -25,7 +31,7 @@ export default function Home() {
       </div>
 
       <div className="grid lg:grid-cols-3 gap-5">
-        <div className="col-span-2">
+        <div className="lg:col-span-2">
           <Card>
             <Statistics />
           </Card>
