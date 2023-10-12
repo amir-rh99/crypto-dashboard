@@ -14,7 +14,7 @@ const cryptoMenuItems: MenuItemInterface[] = cryptoList.map(crypto => ({title: c
 
 const Transaction = () => {
   return (
-    <div className='flex flex-col gap-5'>
+    <div className='flex flex-col gap-5 2xl:gap-10'>
         <div>
           <Tabs tabs={['Buy', 'Sell', 'Send', 'Recieve']} />
         </div>
@@ -35,7 +35,7 @@ const Transaction = () => {
           </span>
         </div>
         
-        <div className='flex flex-col gap-5'>
+        <div className='flex flex-col gap-5 2xl:gap-7'>
           <div className='grid md:grid md:grid-cols-2 lg:grid-cols-1 gap-5'>
             <Menu transactionMenu={true} items={cryptoMenuItems} />
             <Menu transactionMenu={true} 
